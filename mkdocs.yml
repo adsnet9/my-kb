@@ -1,0 +1,76 @@
+site_name: KB Incident Aplikasi MCS
+site_url: http://localhost:8000
+site_description: Dokumentasi Internal Tim IPM – Aplikasi MCS
+site_author: Tim IPM
+
+theme:
+  name: material
+  language: id
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: light blue
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: light blue
+
+  features:
+    - navigation.instant          # Navigasi cepat tanpa reload
+    - navigation.top              # Tombol "Back to top"
+    - navigation.sections         # Section header di sidebar
+    - toc.integrate              # Daftar isi di dalam sidebar
+    - content.code.copy          # Tombol "Copy" di blok kode
+    - search.highlight           # Sorot hasil pencarian
+    - search.suggest             # Suggestion saat ketik
+    - header.autohide            # Header otomatis sembunyi saat scroll
+    - search.share
+    - content.action.edit
+    - content.footer.last-updated
+nav:
+  - Beranda: index.md
+  - Arsitektur Sistem: architecture.md
+  - SOP Penanganan:
+        - Prosedur Insiden: sop/incident_response.md
+  - Kumpulan Insiden: usage/overview.md
+  - FAQ: faq.md
+  - Riwayat Perubahan: changelog.md
+  - Panduan Identifikasi Insiden: deployment.md
+plugins:
+  - search
+  - git-revision-date-localized:
+      locale: id
+      fallback_to_build_date: true
+      type: date  # hanya tampilkan tanggal tanpa waktu
+      timezone: Asia/Jakarta
+      enable_creation_date: false
+     # format: "%A, %-d %B %Y"  # hasilnya: Senin, 29 Juli 2025
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - def_list
+  - attr_list
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.extra
+  - codehilite
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - def_list
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+
+extra_css:
+  - stylesheets/extra.css        # (opsional, untuk custom styling)
+
+agent:
+  authtoken: 30YcTL9BYkMJSu1S82Be0pmN1WA_7cM58HZxmDLnVrhLmBT6b
